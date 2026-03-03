@@ -44,11 +44,11 @@ public class CustomerService {
     }
 
     private List<String> filterPhones(Predicate<Customer> predicate){
-        return customerRepo.findAll().
+        return customerRepo.
+                 findAll().
                  stream()
                 .filter(predicate)
-                .flatMap(customer -> customer.getPhones().
-                        stream())
+                .flatMap(customer -> customer.getPhones().stream())
                 .collect(Collectors.toList());
     }
 
