@@ -1,6 +1,11 @@
 package com.example.exe1.customer.dto;
 
-import java.util.List;
+// ... other jakarta.validation imports
 
-public record CustomerOut(String name, List<String>phones ) {
+import org.jetbrains.annotations.NotNull;
+
+        import java.util.List;
+
+public record CustomerOut(@NotNull String name,
+                          List<String>phones ) {
 }

@@ -4,13 +4,13 @@ import com.example.exe1.customer.service.CalcInput;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
+ @SpringBootApplication(scanBasePackages = "com.example")
 public class Exe1Application {
 
 	public static void main(String[] args) {
 		SpringApplication.run(Exe1Application.class, args);
-		System.out.println(ca.calc());
-		System.out.println(ca1.calc());
+		//System.out.println(ca.calc());
+		//System.out.println(ca1.calc());
 	}
 
 
